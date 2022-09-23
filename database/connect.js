@@ -3,7 +3,9 @@ require("dotenv/config");
 
 const ConnectDB = () => {
   mongoose
-    .connect(process.env.MONGO_URI)
+    .connect(
+      "mongodb+srv://GastonUg:gastgast@beaconexaminationsystem.roslunw.mongodb.net/BES-API?retryWrites=true&w=majority"
+    )
     .then(() => console.log("DATABASE IS CONNECTED SUCCESSFULLY......"))
     .catch((err) => console.log(err));
 };
